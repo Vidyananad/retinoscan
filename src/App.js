@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import {Routes, Route} from 'react-router-dom';
+import Rotoscan from './components/rotoscanPage';
+import Exam from './components/exam';
+import AddExam from './components/addExam'
+import Login from './components/login';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+     <>
+     <div className='App'>
+       <Routes>
+         <Route path="/" element={<Rotoscan/>}/>
+         <Route path="/login" element={<Login/>}/>
+         <Route path="/exam" element={<Exam/>}/>
+         <Route path="/addexam" element={<AddExam/>}/>
+       </Routes>
+       </div>
+     </>
   );
 }
 
